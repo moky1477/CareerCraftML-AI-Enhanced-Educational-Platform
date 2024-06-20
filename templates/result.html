@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Uploaded File Preview</h1>
+    <!-- Display uploaded file here -->
+
+    <h2>Ask a Question</h2>
+    <form action="/process" method="post">
+        <label for="question">Ask a Question:</label><br>
+        <input type="text" id="question" name="question"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Display answer here -->
+    <h2>Answer:</h2>
+    <p>{{ response }}</p>
+</body>
+</html>

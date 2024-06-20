@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+    border: 1px solid white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#feedback-content {
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

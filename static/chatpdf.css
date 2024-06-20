@@ -1,0 +1,166 @@
+
+
+body {
+
+  background-color: black;
+}
+
+
+.heading
+{
+   padding: 30px;
+
+}
+
+.h2
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+}
+
+.gradTxt
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.bodyTxt
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+/* .container-md
+{
+    background-color: aqua;
+    
+}
+
+#inner-container
+{
+    background-color: white;
+    
+} */
+
+
+
+ .dropbox {
+    border: 1px dashed white;
+    width: 90%;
+    height: 150px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .dropbox p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .dropbox input[type="file"] {
+    display: flex;
+    color: aliceblue;
+  }
+  
+  .dropbox label {
+    padding: 10px 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: aliceblue;
+  }
+  
+  .chat-window
+  {
+    margin: auto;
+    width: 90%;
+     
+  }
+
+  .form-control
+  
+  {
+    width: 100%;
+    border: 1px solid white;
+    background-color: black;
+    color: aliceblue;
+
+  }
+
+  .subHeading
+  {
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+  }
+
+  .form-floating 
+  {
+    background-color: black;
+
+  }
+
+  .submitbtn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+  }
+
+  .submitbtn input[type="submit"] {
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-break
+  {
+      color: aliceblue;
+      font-family: "Montserrat", sans-serif;
+  }
+
+.navbar-brand
+{
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav
+{
+  font-family: "Montserrat", sans-serif;
+}
+
+.finalContainer
+{
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 80px;
+}

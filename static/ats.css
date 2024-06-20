@@ -1,0 +1,355 @@
+
+body {
+  /* background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%); */
+  background-color: black;
+}
+
+
+.container-1
+{
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 160px;
+}
+
+.mainHeading 
+{
+   text-align: left;
+   color: aliceblue;
+   font-family: "Montserrat", sans-serif;
+   font-size: 60px;
+   
+}
+
+.grad
+{
+   
+   text-align: left;
+   color: aliceblue;
+   font-family: "Montserrat", sans-serif;
+   font-size: 60px;
+   background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.bodyText
+{
+  text-align: left;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.bodyText1
+{
+  text-align: center;
+  color: aliceblue;
+  /* color: #6F7A90; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.gradBody
+{
+  text-align: left;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.row {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+#getStarted {
+  margin: 0 auto;
+  justify-content: left;
+  /* margin-left: 400px; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.atsImg
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 20px;
+    /* margin-top: 50px; */
+    
+}
+
+.container-2
+{
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 130px;
+}
+
+.container-3
+{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 130px;
+}
+
+.container-4
+{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 130px;
+}
+
+.heading4
+{
+  text-align: left;
+   color: aliceblue;
+   font-family: "Montserrat", sans-serif;
+   font-size: 55px;
+}
+
+.bodyText4
+{
+  text-align: left;
+  color: #f1f3f7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  
+}
+
+.innerContainer
+{
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 15px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
+}
+
+.heading2
+{
+   text-align: center;
+   color: aliceblue;
+   font-family: "Montserrat", sans-serif;
+   font-size: 55px;
+}
+
+.f1
+{
+  width: 110px;
+  height: 110px;
+  justify-content: left;
+}
+
+.f2
+{
+  width: 110px;
+  height: 110px;
+  justify-content: left;
+}
+
+.f1heading
+{
+  text-align: left;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.f1bodyText
+{
+  text-align: left;
+  color: #6F7A90;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+
+
+
+.containerATS
+{
+   padding: 30px;
+   margin: 0 auto;
+   width: 80%;
+   padding: 20px;
+   margin-top: 30px;
+   border-radius: 15px;
+
+}
+
+.h2
+{
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+    
+}
+
+.gradATS
+{
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.atsform
+{
+    margin: auto;
+    width: 80%;
+    height:250px;
+}
+
+#floatingTextarea2
+
+{
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+.textboxHeading
+{
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 110px;
+}
+
+#inputText
+{
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: black;
+}
+.dropbox {
+    border: 1px dashed white;
+    width: 90%;
+    height: 100px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .submitbtn
+{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 15px;
+}
+.submitbtn input[type="submit"] {
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-break
+{
+    color: aliceblue;
+}
+
+.containerResp
+{
+    margin: 0 auto;
+    width: 90%;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20px;
+    color: aliceblue;
+    justify-content: left;
+
+}
+
+  .inner-dropbox
+  {
+     color: white;
+
+  }
+  
+  .dropbox p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .dropbox input[type="file"] {
+    display: flex;
+  }
+  
+  .dropbox label {
+    padding: 10px 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .submitbtn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+  }
+
+  .navbar-brand
+{
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav
+{
+  font-family: "Montserrat", sans-serif;
+}

@@ -1,0 +1,160 @@
+
+body{
+    background-color: black;
+}
+
+.container-1
+{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 130px;
+}
+
+.mainHeading
+{
+    text-align: center;
+    color: aliceblue;
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.grad
+{
+    text-align: center;
+    color: aliceblue;
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ebebe7;
+    background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.bodyText
+{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container-2
+{
+    border: 1px solid white;
+    margin: 0 auto;
+    border-radius: 15px;
+    width: 80%;
+    background-color: #02050B;
+    margin-top: 50px;
+}
+
+.inputImage
+{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-top: 80px;
+}
+
+.dropboxHeading
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+
+.dropboxBody
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.gradBody
+{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+    background-color: #ebebe7;
+    background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.container-2 input[type="file"] {
+    display: flex;
+  }
+
+.inputFile
+{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    margin-left:450px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.submitbtn
+{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20px;
+}
+.submitbtn input[type="submit"] {
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.text-break
+{
+    color: aliceblue;
+}
+
+.containerResp
+{
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 40px;
+    color: aliceblue;
+    border: 1px solid white;
+    border-radius: 15px;
+
+}
+
+.navbar-brand
+{
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav
+{
+  font-family: "Montserrat", sans-serif;
+}

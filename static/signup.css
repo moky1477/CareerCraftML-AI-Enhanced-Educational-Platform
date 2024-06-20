@@ -1,0 +1,87 @@
+
+
+/* body{
+  background-color: black;
+} */
+.container-1
+{
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.col-1{
+  float: left;
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.col-2 {
+  float: left;
+  width: 50%;
+}
+
+.innerContainer
+{
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid white;
+  /* background-color:ghostwhite; */
+}
+
+.heading
+{
+  text-align: center;
+  /* color: aliceblue; */
+  margin-top: 90px;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+.innerBodyText
+{
+  text-align: center;
+  /* color: aliceblue; */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.formLabel
+{
+  /* color: aliceblue; */
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+#emailInput
+{
+  background-color: black;
+  border: 1px soild white;
+  width: 80%;
+}
+
+.inputName
+{
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.innerContainer-1
+{
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.bottomText
+{
+  text-align: center;
+  columns: black;
+  font-family: "Poppins", sans-serif;
+  margin-top: 25px;
+}

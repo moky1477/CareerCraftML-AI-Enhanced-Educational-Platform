@@ -1,0 +1,80 @@
+<div class="heading">
+      <h1 class="h2">YouTube Video AI Summarizer</h1>
+    </div>
+
+    <div class="inputlink">
+      <form action="/summarize" method="post">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="link"
+            value="{{ link }}"
+            id="link"
+          />
+          <label for="floatingInput">Enter YouTube Video Link</label>
+        </div>
+        <div class="submitbtn">
+          <input
+            class="btn btn-primary"
+            type="submit"
+            value="Get Detailed Notes"
+          />
+        </div>
+      </form>
+      <div class="outputSummary">
+        <img
+          src="http://img.youtube.com/vi/{{ link.split('=')[1] }}/0.jpg"
+          alt="Video Thumbnail"
+          style="max-width: 100%; height: auto"
+        />
+        <p>Detailed Notes:</p>
+        <p class="text-break">{{ response }}</p>
+      </div>
+    </div>
+
+    {% if youtube_link %}
+    <h2>YouTube Video:</h2>
+    <img
+      src="http://img.youtube.com/vi/{{ link }}/0.jpg"
+      alt="YouTube Thumbnail"
+      width="300"
+    />
+    {% endif %}
+
+
+// CSS Code 
+
+
+.heading
+{
+   padding: 30px;
+    /* background-color: green; */
+
+}
+
+.h2
+{
+    /* background-color: aqua; */
+    text-align: center;
+    /* margin-top: 20px; */
+      
+}
+
+.inputlink
+{
+    margin: auto;
+    width: 90%;
+}
+
+.submitbtn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+  }
+
+  .outputSummary
+  {
+    margin: auto;
+    width: 90%;
+  }

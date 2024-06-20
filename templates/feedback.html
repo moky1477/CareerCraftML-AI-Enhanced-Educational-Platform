@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback</title>
+    <link rel="stylesheet" href="/static/feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interview Feedback</h1>
+        <div id="feedback-content">
+            <p>Loading feedback...</p>
+        </div>
+        <button id="new-interview">Take New Interview</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to fetch and display feedback
+            fetchFeedback();
+        });
+
+        document.getElementById('new-interview').addEventListener('click', function() {
+            clearSessions();
+        });
+
+        function clearSessions() {
+            fetch('/clear_sessions', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    console.log('Previous interview sessions cleared.');
+                    // Redirect to the homepage after clearing sessions
+                    window.location.href = '/';
+                } else {
+                    console.error('Error: Unable to clear previous interview sessions.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function fetchFeedback() {
+            const userName = sessionStorage.getItem('user_name');
+            const jobDescription = sessionStorage.getItem('job_description');
+
+            fetch(`/get_feedback?user_name=${userName}&job_description=${jobDescription}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        document.getElementById('feedback-content').innerHTML = formatFeedback(data.feedback);
+                    } else {
+                        document.getElementById('feedback-content').innerHTML = `<p>Error: ${data.message}</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('feedback-content').innerHTML = `<p>Error: ${error.message}</p>`;
+                });
+        }
+
+        function formatFeedback(feedback) {
+            return feedback
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+        }
+    </script>
+</body>
+</html>

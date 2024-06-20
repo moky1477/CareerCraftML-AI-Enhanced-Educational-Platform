@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+    margin-top: 150px;
+    border: 1px solid white;
+}
+
+#name
+{
+    color: white;
+}
+
+.mainHeading
+{
+  background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+}
+
+
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    background-color: #22d5c9;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1bb3a6;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    font-size: 24px;
+    margin: 20px 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.record-button {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.record-button:after {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    margin-left: 5px;
+    transform: translate(-50%, -50%);
+}
+
+#next-question {
+    margin-top: 20px;
+}
+
+#thank-you-section {
+    text-align: center;
+}
+
+#user_name
+{
+    color:black;
+}
+
+.startInterview
+{
+      background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+      border: none;
+      color: white; /* You may need to adjust the text color for better visibility */
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+.question
+{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#question-box
+{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+#next-question
+{
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none
+}
+
+.record-button
+{
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+#new-interview
+{
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+#view-feedback
+{
+    background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+    border: none;
+    color: white; /* You may need to adjust the text color for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+    margin-left: 15px;
+}
+
+.endText
+{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}

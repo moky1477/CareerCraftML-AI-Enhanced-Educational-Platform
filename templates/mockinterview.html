@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="/static/mockinterview.js"></script> -->
+    <title>Mock Interview System</title>
+    <link rel="stylesheet" href="/static/mockinterview.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Starts  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CareerCraftML</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/resumescan">ATS Scanner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/summarwise"
+                >Youtube Summarizer</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-disabled="true" href="/"
+                >Chatpdf</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-disabled="true"
+                href="/resumejudge"
+                >Resume Judge</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true" href="/signup"> SignUp</a>
+                </li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-disabled="true"
+                href="/mockinterview"
+              >
+                Mock Interview</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true" href="/"
+              >Hey! Aditya</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img
+                src="../static/profile.png"
+                alt="Profile Picture"
+                class="img-fluid rounded-circle"
+                style="width: 30px"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Navigation Bar Ends -->
+
+    <div class="container">
+      <h1 class="mainHeading">CareerCraftML</h1>
+
+      <form id="interview-form">
+        <label for="user_name" id="name">Enter your name</label>
+        <input
+          type="text"
+          id="user_name"
+          name="user_name"
+          style="background-color: black; color: aliceblue; margin-top: 15px"
+          required
+        />
+
+        <label for="job_description" id="name"
+          >Enter the job description:</label
+        >
+        <textarea
+          id="job_description"
+          name="job_description"
+          rows="4"
+          required
+          style="background-color: black; color: aliceblue; margin-top: 15px"
+        ></textarea>
+
+        <button type="submit" class="startInterview">Start Interview</button>
+      </form>
+
+      <div id="interview-section" style="display: none">
+        <div class="question-container">
+          <h2 id="question-number" class="question">Question 1</h2>
+          <p id="question-box"></p>
+          <div id="timer">00:00 / 00:30</div>
+          <button id="record-answer" class="record-button"></button>
+          <button id="next-question" style="display: none">Next</button>
+        </div>
+      </div>
+
+      <div id="thank-you-section" style="display: none">
+        <h2 class="endText">Thank You for Completing the Interview!</h2>
+        <button id="new-interview">Take New Interview</button>
+        <button id="view-feedback">View Feedback</button>
+      </div>
+    </div>
+
+    
+
+    <script>
+      let currentQuestionIndex = 0;
+      let questions = [];
+      let answers = [];
+      let userName = "";
+      let jobDescription = "";
+      let timerInterval;
+      let timePassed = 0;
+      const timeLimit = 30; // 30 seconds
+
+      document
+        .getElementById("interview-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          startInterview();
+        });
+
+      function startInterview() {
+        userName = document.getElementById("user_name").value;
+        jobDescription = document.getElementById("job_description").value;
+
+        // Store userName and jobDescription in session storage
+        sessionStorage.setItem("user_name", userName);
+        sessionStorage.setItem("job_description", jobDescription);
+
+        fetch("/start_interview", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user_name: userName,
+            job_description: jobDescription,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "success") {
+              document.getElementById("interview-form").style.display = "none";
+              document.getElementById("interview-section").style.display =
+                "block";
+              questions = data.questions;
+              displayQuestion(currentQuestionIndex);
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      function displayQuestion(index) {
+        if (index < questions.length) {
+          document.getElementById("question-number").innerText = `Question ${
+            index + 1
+          }`;
+          document.getElementById("question-box").innerText = questions[index];
+          document.getElementById("timer").innerText = `00:00 / 00:30`;
+          document.getElementById("next-question").style.display = "none";
+        }
+      }
+
+      document
+        .getElementById("record-answer")
+        .addEventListener("click", function () {
+          startTimer();
+          fetch("/record_answer", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              stopTimer();
+              if (data.status === "success") {
+                answers.push(data.answer);
+                if (currentQuestionIndex < questions.length - 1) {
+                  document.getElementById("next-question").style.display =
+                    "block";
+                } else {
+                  completeInterview();
+                }
+              } else {
+                alert("Error: " + data.message);
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+
+      document
+        .getElementById("next-question")
+        .addEventListener("click", function () {
+          currentQuestionIndex++;
+          displayQuestion(currentQuestionIndex);
+        });
+
+      function completeInterview() {
+        fetch("/complete_interview", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user_name: userName,
+            job_description: jobDescription,
+            questions: questions,
+            responses: answers,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "success") {
+              document.getElementById("interview-section").style.display =
+                "none";
+              document.getElementById("thank-you-section").style.display =
+                "block";
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      document
+        .getElementById("view-feedback")
+        .addEventListener("click", function () {
+          // Redirect to the feedback page
+          window.location.href = "/feedback";
+        });
+
+      document
+        .getElementById("new-interview")
+        .addEventListener("click", function () {
+          clearSessions();
+          resetInterview();
+        });
+
+      function clearSessions() {
+        fetch("/clear_sessions", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "success") {
+              console.log("Previous interview sessions cleared.");
+            } else {
+              console.error(
+                "Error: Unable to clear previous interview sessions."
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      function resetInterview() {
+        currentQuestionIndex = 0;
+        questions = [];
+        answers = [];
+        document.getElementById("user_name").value = "";
+        document.getElementById("job_description").value = "";
+        document.getElementById("interview-form").style.display = "block";
+        document.getElementById("thank-you-section").style.display = "none";
+      }
+
+      function startTimer() {
+        timePassed = 0;
+        document.getElementById("record-answer").disabled = true;
+        timerInterval = setInterval(() => {
+          timePassed++;
+          const minutes = String(Math.floor(timePassed / 60)).padStart(2, "0");
+          const seconds = String(timePassed % 60).padStart(2, "0");
+          document.getElementById(
+            "timer"
+          ).innerText = `${minutes}:${seconds} / 00:30`;
+          if (timePassed >= timeLimit) {
+            stopTimer();
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timerInterval);
+        document.getElementById("record-answer").disabled = false;
+      }
+    </script>
+  </body>
+</html>

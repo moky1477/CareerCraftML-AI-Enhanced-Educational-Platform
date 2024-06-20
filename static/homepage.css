@@ -1,0 +1,195 @@
+body {
+  /* background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%); */
+  background-color: black;
+}
+
+.h2 {
+  text-align: center;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+}
+
+.bodyText {
+  text-align: center;
+  background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
+.innerbodyText {
+  text-align: center;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  width: 70%;
+  margin-left: 140px;
+  margin-top: 30px;
+}
+
+#getStarted {
+  margin: 0 auto;
+  justify-content: center;
+  margin-left: 400px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.container-1 {
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 70%;
+  /* background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%); */
+}
+
+.container-2 {
+  /* border: 2px solid white; */
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 70%;
+}
+
+.container-3 {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.heading2 {
+  text-align: center;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
+.subText {
+  text-align: center;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  width: 50%;
+  margin-left: 250px;
+  margin-top: 10px;
+}
+
+.row {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+.colTexthead
+{
+  text-align: left;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.colText
+{
+  text-align: left;
+  background-color: #ebebe7;
+  background-image: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.colsubText
+{
+    text-align: left;
+    color:aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-top: 40px;
+    width: 90%;
+}
+
+#tryATSbtn
+{
+    margin: 0 auto;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.atsImg
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 20px;
+    /* margin-top: 50px; */
+    
+}
+
+.container-4
+{
+  
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.container-5
+{
+  
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.footer
+{
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 40px;
+}
+.footerText
+{
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+}   
+
+.navbar-brand
+{
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav
+{
+  font-family: "Montserrat", sans-serif;
+}
